@@ -14,7 +14,7 @@ import { toLowerCase } from "./toLowerCase";
 import { toUpperCase } from "./toUpperCase";
 import { padStart } from "./padStart";
 
-export default {
+export {
   isString,
   isNotEmpty,
   returnValidString,
@@ -29,5 +29,5 @@ export default {
   startWith,
   endWith,
   times,
-  padStart
+  padStart,
 };
