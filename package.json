@@ -1,8 +1,8 @@
 {
   "name": "dev-utilz",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Module intended to be used by developers to help with development",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "jest --config jestconfig.json --coverage",
     "build": "tsc",
