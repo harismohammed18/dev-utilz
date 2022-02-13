@@ -12,6 +12,7 @@ import { throwErrorIfNotString } from "./throwErrorIfNotString";
 import { times } from "./times";
 import { toLowerCase } from "./toLowerCase";
 import { toUpperCase } from "./toUpperCase";
+import { padStart } from "./padStart";
 
 export default {
   isString,
@@ -28,4 +29,5 @@ export default {
   startWith,
   endWith,
   times,
+  padStart
 };
