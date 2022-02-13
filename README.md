@@ -52,7 +52,7 @@ Check whether the string is empty or not.
  * If  empty return false else not.
  * If it's string, check whether it's empty or not else return false
  * If doTrim is true, trim the string before check. default value is false.
- ```sh
+ ```javascript
 import { strHelper } from "dev-utilz";
 
 console.log(strHelper.isNotEmpty("string")); // true
