@@ -1,0 +1,39 @@
+{
+  "name": "dev-utilz",
+  "version": "0.0.1",
+  "description": "Module intended to be used by developers to help with development",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config jestconfig.json --coverage",
+    "build": "tsc",
+    "lint": "eslint . --ext .ts",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harismohammed18/arm-helper.git"
+  },
+  "keywords": ["string-utils", "string-utils-js","string-helper"],
+  "author": "harismohammed18",
+  "license": "ISC",
+  "files": [
+    "lib/**/*"
+  ],
+  "bugs": {
+    "url": "https://github.com/harismohammed18/arm-helper/issues"
+  },
+  "homepage": "https://github.com/harismohammed18/arm-helper#readme",
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "eslint": "^8.9.0",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}
