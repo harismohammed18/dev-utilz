@@ -3,8 +3,8 @@ import { throwErrorIfNotString } from "./throwErrorIfNotString";
 /**
  * function to get substring
  * @param {string} str - string value
- * @param {number} start - start index
- * @param {number} end - end index
+ * @param {number} [start=0] - start index
+ * @param {number} [end=0] - end index
  * @returns {string} return substring
  *
  * @example

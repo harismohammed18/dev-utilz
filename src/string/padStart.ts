@@ -4,9 +4,9 @@ import { throwErrorIfNotString } from "./throwErrorIfNotString";
 /**
  * Pads `string` on the left and right sides if it's shorter than `length`.
  * Padding characters are truncated if they can't be evenly divided by `length`.
- * @param {string} [string=''] The string to pad.
- * @param {number} [length=0] The padding length.
- * @param {string} [chars=' '] The string used as padding.
+ * @param {string} str The string to pad.
+ * @param {number} targetLength The padding length.
+ * @param {string} [padString=" "] The string used as padding.
  * @returns {string} Returns the padded string.
  */
 export const padStart = (
