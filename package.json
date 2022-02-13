@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harismohammed18/arm-helper.git"
+    "url": "git+https://github.com/harismohammed18/dev-utilz.git"
   },
   "keywords": ["string-utils", "string-utils-js","string-helper"],
   "author": "harismohammed18",
@@ -24,9 +24,9 @@
     "lib/**/*"
   ],
   "bugs": {
-    "url": "https://github.com/harismohammed18/arm-helper/issues"
+    "url": "https://github.com/harismohammed18/dev-utilz/issues"
   },
-  "homepage": "https://github.com/harismohammed18/arm-helper#readme",
+  "homepage": "https://github.com/harismohammed18/dev-utilz#readme",
   "devDependencies": {
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
