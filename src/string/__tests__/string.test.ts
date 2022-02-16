@@ -72,3 +72,11 @@ test("Test padStart", () => {
   expect(stringFunctions.padStart("ab", 3, "x")).toBe("xab");
   expect(stringFunctions.padStart("ab", 5, "xy")).toBe("xyxab");
 });
+
+test("Test padEnd", () => {
+  expect(stringFunctions.padEnd("ab", 1)).toBe("ab");
+  expect(stringFunctions.padEnd("ab", 2)).toBe("ab");
+  expect(stringFunctions.padEnd("ab", 3)).toBe("ab ");
+  expect(stringFunctions.padEnd("ab", 3, "x")).toBe("abx");
+  expect(stringFunctions.padEnd("ab", 5, "xy")).toBe("abxyx");
+});
