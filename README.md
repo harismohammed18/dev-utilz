@@ -22,8 +22,8 @@ Utility functions to speedup development
   - [startWith](#startWith)
   - [times](#times)
   - pad #TODO
-  - padStart  #TODO
-  - padEnd  #TODO
+  - [padStart](#padStart)
+  - [padEnd](#padEnd)
   - getLength  #TODO
 - Number  #TODO
 
@@ -159,4 +159,20 @@ Function to repeat string n times and return array
 ```javascript
 import { times } from "dev-utilz";
 console.log(times("string",2)); // ["string","string"]
+```
+
+### padStart
+Function to add `string` on the left sides
+```javascript
+import { padStart } from "dev-utilz";
+console.log(padStart("ab", 1)); // ab
+console.log(padStart("ab", 3, "x")); // xab
+```
+
+### padEnd
+Function to add `string` on the right sides
+```javascript
+import { padEnd } from "dev-utilz";
+console.log(padEnd("ab", 1)); // ab
+console.log(padEnd("ab", 3, "x")); // abx
 ```

@@ -1,4 +1,4 @@
-import stringFunctions from "../index";
+import * as stringFunctions from "../index";
 
 test("Test isString: type check", () => {
   expect(stringFunctions.isString("John")).toBeTruthy();
@@ -64,4 +64,19 @@ test("Test getFirstLetter", () => {
 test("Test getSubString", () => {
   expect(stringFunctions.getSubString("John", 1, 3)).toBe("oh");
   expect(stringFunctions.getSubString("", 1, 3)).toBe("");
+});
+test("Test padStart", () => {
+  expect(stringFunctions.padStart("ab", 1)).toBe("ab");
+  expect(stringFunctions.padStart("ab", 2)).toBe("ab");
+  expect(stringFunctions.padStart("ab", 3)).toBe(" ab");
+  expect(stringFunctions.padStart("ab", 3, "x")).toBe("xab");
+  expect(stringFunctions.padStart("ab", 5, "xy")).toBe("xyxab");
+});
+
+test("Test padEnd", () => {
+  expect(stringFunctions.padEnd("ab", 1)).toBe("ab");
+  expect(stringFunctions.padEnd("ab", 2)).toBe("ab");
+  expect(stringFunctions.padEnd("ab", 3)).toBe("ab ");
+  expect(stringFunctions.padEnd("ab", 3, "x")).toBe("abx");
+  expect(stringFunctions.padEnd("ab", 5, "xy")).toBe("abxyx");
 });
