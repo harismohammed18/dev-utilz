@@ -18,9 +18,7 @@ export const padStart = (
   throwErrorIfNotString(padString);
 
   if (isNotEmpty(str) && targetLength >= 0) {
-    return padString
-      ? str.padStart(targetLength, padString)
-      : str.padStart(targetLength);
+    return str.padStart(targetLength, padString);
   }
   return str;
 };
