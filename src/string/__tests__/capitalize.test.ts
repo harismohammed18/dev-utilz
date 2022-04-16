@@ -1,4 +1,4 @@
-import stringFunctions from "../index";
+import * as stringFunctions from "../index";
 
 test("test capitalize", () => {
   expect(stringFunctions.capitalize("john")).toBe("John");

@@ -21,11 +21,14 @@ Utility functions to speedup development
   - [getLastLetters](#getLastLetters)
   - [startWith](#startWith)
   - [times](#times)
-  - pad #TODO
-  - padStart  #TODO
-  - padEnd  #TODO
-  - getLength  #TODO
-- Number  #TODO
+  - [padStart](#padStart)
+  - [padEnd](#padEnd)
+  - [stringSize](#stringSize)
+  - [hasUnicode](#hasUnicode)
+  - [unicodeSize](#unicodeSize)
+  - [asciiSize](#asciiSize)
+
+- Number #TODO
 
 ## Install
 
@@ -36,10 +39,15 @@ $ npm install --save dev-utilz
 ```
 
 ## String utilities
+
 This library will support following string utility functions
+
 ### isString
+
 Check whether the given value is string or not. if valid string return tru else false.
+
 #### usage
+
 ```javascript
 import { isString } from "dev-utilz";
 
@@ -48,11 +56,14 @@ console.log(isString(1)); // false
 ```
 
 ### isNotEmpty
-Check whether the string is empty or not. 
- * If  empty return false else not.
- * If it's string, check whether it's empty or not else return false
- * If doTrim is true, trim the string before check. default value is false.
- ```javascript
+
+Check whether the string is empty or not.
+
+- If empty return false else not.
+- If it's string, check whether it's empty or not else return false
+- If doTrim is true, trim the string before check. default value is false.
+
+```javascript
 import { isNotEmpty } from "dev-utilz";
 
 console.log(isNotEmpty("string")); // true
@@ -60,11 +71,12 @@ console.log(isNotEmpty(1)); // false
 console.log(isNotEmpty("")); // false
 console.log(isNotEmpty(" ")); // true
 console.log(isNotEmpty(" ", true)); // false
-
- ```
+```
 
 ### returnValidString
+
 If value is string return value else return empty string.
+
 ```javascript
 import { returnValidString } from "dev-utilz";
 
@@ -73,7 +85,9 @@ console.log(returnValidString(1)); // ""
 ```
 
 ### capitalize
+
 Capitalize the string
+
 ```javascript
 import { capitalize } from "dev-utilz";
 
@@ -82,7 +96,9 @@ console.log(capitalize("test String")); // Test string
 ```
 
 ### capitalizeAll
+
 Capitalize each word in string
+
 ```javascript
 import { capitalizeAll } from "dev-utilz";
 
@@ -91,7 +107,9 @@ console.log(capitalizeAll("test string")); // Test String
 ```
 
 ### throwErrorIfNotString
+
 Throw error if value is not a string else return string
+
 ```javascript
 import { throwErrorIfNotString } from "dev-utilz";
 
@@ -101,7 +119,9 @@ console.log(throwErrorIfNotString(1)); // throw error
 ```
 
 ### toLowerCase
+
 Convert entire string to lowercase
+
 ```javascript
 import { toLowerCase } from "dev-utilz";
 
@@ -110,53 +130,99 @@ console.log(toLowerCase("TEST String")); // test string
 ```
 
 ### toUpperCase
+
 Convert entire string to uppercase
+
 ```javascript
 import { toUpperCase } from "dev-utilz";
 
 console.log(toUpperCase("string")); // STRING
 console.log(toUpperCase("TEST String")); // TEST STRING
 ```
+
 ### getFirstLetters
+
 Function to get the first n letters of a string
+
 ```javascript
 import { getFirstLetters } from "dev-utilz";
 
-console.log(getFirstLetters("string",2)); // st
+console.log(getFirstLetters("string", 2)); // st
 ```
 
 ### getSubString
+
 Function to get substring from given string
+
 ```javascript
 import { getSubString } from "dev-utilz";
-console.log(getSubString("John", 1, 3)) // oh
+console.log(getSubString("John", 1, 3)); // oh
 ```
+
 ### getLastLetters
+
 Function to get the last n letters of a string
+
 ```javascript
 import { getLastLetters } from "dev-utilz";
 
-console.log(getLastLetters("string",2)); // ng
+console.log(getLastLetters("string", 2)); // ng
 ```
 
 ### startWith
+
 Check whether the string is start with given string
+
 ```javascript
 import { startWith } from "dev-utilz";
-console.log(startWith("string","str")); // true
-console.log(startWith("TEST String","John")); // false
+console.log(startWith("string", "str")); // true
+console.log(startWith("TEST String", "John")); // false
 ```
+
 ### endWith
+
 Check whether the string is end with given string
+
 ```javascript
 import { endWith } from "dev-utilz";
-console.log(endWith("string","ing")); // true
-console.log(endWith("TEST String","John")); // false
+console.log(endWith("string", "ing")); // true
+console.log(endWith("TEST String", "John")); // false
 ```
 
 ### times
+
 Function to repeat string n times and return array
+
 ```javascript
 import { times } from "dev-utilz";
-console.log(times("string",2)); // ["string","string"]
+console.log(times("string", 2)); // ["string","string"]
+```
+
+### padStart
+
+Pads string on the left side if it's shorter than length. Padding characters are truncated if they exceed length.
+
+```javascript
+import { padStart } from "dev-utilz";
+console.log(padStart("abc", 6)); // '   abc'
+console.log(padStart("abc", 6, "_")); // '___abc'
+```
+
+### padEnd
+
+Pads string on the right side if it's shorter than length. Padding characters are truncated if they exceed length.
+
+```javascript
+import { padEnd } from "dev-utilz";
+console.log(padEnd("abc", 6)); // 'abc   '
+console.log(padEnd("abc", 6, "_")); // 'abc___'
+```
+
+### stringSize
+
+Gets the number of symbols in `string`.
+
+```javascript
+import { stringSize } from "dev-utilz";
+console.log(stringSize("qwerty")) // 6
 ```

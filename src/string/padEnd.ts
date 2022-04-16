@@ -2,14 +2,14 @@ import { isNotEmpty } from "./isNotEmpty";
 import { throwErrorIfNotString } from "./throwErrorIfNotString";
 
 /**
- * Pads `string` on the left side if it's shorter than `length`. Padding
+ * Pads `string` on the right side if it's shorter than `length`. Padding
  * characters are truncated if they exceed `length`.
  * @param {string} str The string to pad.
  * @param {number} targetLength The padding length.
  * @param {string} [padString=" "] The string used as padding.
  * @returns {string} Returns the padded string.
  */
-export const padStart = (
+export const padEnd = (
   str: string,
   targetLength: number,
   padString = " "
@@ -19,8 +19,8 @@ export const padStart = (
 
   if (isNotEmpty(str) && targetLength >= 0) {
     return padString
-      ? str.padStart(targetLength, padString)
-      : str.padStart(targetLength);
+      ? str.padEnd(targetLength, padString)
+      : str.padEnd(targetLength);
   }
   return str;
 };

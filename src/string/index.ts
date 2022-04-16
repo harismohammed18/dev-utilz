@@ -13,6 +13,10 @@ import { times } from "./times";
 import { toLowerCase } from "./toLowerCase";
 import { toUpperCase } from "./toUpperCase";
 import { padStart } from "./padStart";
+import { asciiSize } from "./asciiSize";
+import { unicodeSize } from "./unicodeSize";
+import { stringSize } from "./stringSize";
+import { hasUnicode } from "./hasUnicode";
 
 export {
   isString,
@@ -30,4 +34,8 @@ export {
   endWith,
   times,
   padStart,
+  asciiSize,
+  unicodeSize,
+  stringSize,
+  hasUnicode,
 };
