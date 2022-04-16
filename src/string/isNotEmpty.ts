@@ -8,6 +8,12 @@ import { returnValidString } from "./returnValidString";
  * @param {unknown} str - unknown value
  * @param {boolean} [doTrim=false] - if doTrim  then trim the string before check else not
  * @returns {boolean}  false if string is empty, true if not
+ *
+ * @example
+ * isNotEmpty(""); // false
+ * isNotEmpty(" "); // true
+ * isNotEmpty(" ", true); // false
+ * isNotEmpty("hello world"); // true
  */
 export const isNotEmpty = (str: unknown, doTrim = false): boolean => {
   return doTrim === true

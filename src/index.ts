@@ -1,2 +1,2 @@
-import strHelper from "./string";
-export { strHelper };
+export * from "./string";
+export * as strHelper from "./string";

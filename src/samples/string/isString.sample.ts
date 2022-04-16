@@ -1,7 +1,4 @@
-import { strHelper } from "../../index";
+import { isString, strHelper } from "../../index";
 
-console.log(strHelper.isString("string")); // true
-console.log(strHelper.isString(1)); // false
-console.log(strHelper.isString("")); // true
-console.log(strHelper.isString(null)); // false
-console.log(strHelper.isString(undefined)); // false
+console.log("🚀 ~ file: isString.sample.ts ~ line 4 ~ strHelper", isString(""));
+

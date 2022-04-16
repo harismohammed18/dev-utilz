@@ -6,6 +6,11 @@ import { throwErrorIfNotString } from "./throwErrorIfNotString";
  * if not a string throw error
  * @param {string} str - string value
  * @returns {string} return capitalized string
+ * 
+ * @example
+ * capitalize("hello world"); // "Hello world"
+ * capitalize(""); // ""
+ * capitalize(123); // Error: not a string
  */
 export const capitalize = (str: string): string => {
   throwErrorIfNotString(str);

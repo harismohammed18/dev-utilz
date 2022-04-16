@@ -1,4 +1,4 @@
-import stringFunctions from "../index";
+import * as stringFunctions from "../index";
 
 test("Test isString: type check", () => {
   expect(stringFunctions.isString("John")).toBeTruthy();

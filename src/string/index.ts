@@ -12,8 +12,13 @@ import { throwErrorIfNotString } from "./throwErrorIfNotString";
 import { times } from "./times";
 import { toLowerCase } from "./toLowerCase";
 import { toUpperCase } from "./toUpperCase";
+import { padStart } from "./padStart";
+import { asciiSize } from "./asciiSize";
+import { unicodeSize } from "./unicodeSize";
+import { stringSize } from "./stringSize";
+import { hasUnicode } from "./hasUnicode";
 
-export default {
+export {
   isString,
   isNotEmpty,
   returnValidString,
@@ -28,4 +33,9 @@ export default {
   startWith,
   endWith,
   times,
+  padStart,
+  asciiSize,
+  unicodeSize,
+  stringSize,
+  hasUnicode,
 };
