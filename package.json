@@ -1,6 +1,6 @@
 {
   "name": "dev-utilz",
-  "version": "0.0.7.0",
+  "version": "0.0.7",
   "description": "Module intended to be used by developers to help with development",
   "main": "lib/index.js",
   "scripts": {
