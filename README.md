@@ -24,9 +24,6 @@ Utility functions to speedup development
   - [padStart](#padStart)
   - [padEnd](#padEnd)
   - [stringSize](#stringSize)
-  - [hasUnicode](#hasUnicode)
-  - [unicodeSize](#unicodeSize)
-  - [asciiSize](#asciiSize)
 
 - Number #TODO
 
